@@ -99,7 +99,8 @@ Actualmente, el proyecto se encuentra en la etapa de propuesta y documentación 
 - Jannely Rosario Rodriguez Nolasco
 - Marco Antonio Barrios Delgado
 - Castañeda Inocencio Rosalía Hillary 
-- [Nombre del quinto integrante]
+- Llatas Bernales Enzo Braian
+
 
 ## Docente
 
