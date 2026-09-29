@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: georiesgos-mysql
+    restart: "no"
+    environment:
+      MYSQL_DATABASE: soa
+      MYSQL_USER: soauser
+      MYSQL_PASSWORD: soapassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+      TZ: America/Lima
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "soauser", "-psoapassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  mysql-data:
